@@ -9,7 +9,6 @@ app.use(express.json())
 const db = mongoose.connection
 const url = process.env.URL
 
-console.log(url)
  
 mongoose.connect(url,{
     useNewurlParser: true,
@@ -26,4 +25,4 @@ app.post('/insert', (req,res) => {
     res.json("success")
 })
 
-app.listen(3001)
+app.listen(process.env.PORT || 3000)
