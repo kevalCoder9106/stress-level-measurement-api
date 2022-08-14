@@ -8,6 +8,8 @@ app.use(express.json())
 
 const db = mongoose.connection
 const url = process.env.URL
+
+console.log(url)
  
 mongoose.connect(url,{
     useNewurlParser: true,
